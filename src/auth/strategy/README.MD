@@ -1,0 +1,1 @@
+a strategy é algo (um modulo(uma classe com um decorator)) que verifica a vericidade do token
