@@ -13,4 +13,9 @@ export class PrismaService extends PrismaClient {
       },
     });
   }
+
+  clearDb() {
+    // The transaction in this case is used to secure that prisma will not optimize querys and run one over other
+    this.$transaction([this.bookmark.deleteMany(), this.user.deleteMany()]);
+  }
 }
